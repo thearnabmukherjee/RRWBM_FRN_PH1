@@ -1,0 +1,36 @@
+
+<!-- Button to trigger the modal -->
+<app-search [data]="savedData" searchKey="name" (results)="onSearchResults($event)" [isShowStartDate]="false" [isShowEndDate]="false"></app-search>
+
+
+<div class="geoposition is-flex is-justify-content-flex-end is-align-items-flex-start">
+  <app-create-class></app-create-class>
+</div>
+
+
+
+<table class="table is-bordered is-striped is-narrow is-hoverable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Created On</th>
+        <th>Created By</th>
+        <th>Action</th>
+    
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of searchResults">
+
+        <td>{{ data.name }}</td>
+        <td>{{ data.cron }}</td>
+        <td>{{ data.crby }}</td>
+       
+        <td>
+          <button class="button is-info is-rounded"(click)="deleteData(data)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <button class="button is-danger is-outlined is-large">Generate</button> -->
+  

@@ -1,0 +1,99 @@
+.heading{
+   color: red;
+   font-size: larger;
+}
+
+.bulma-form {
+    max-width: 900px;
+    margin:  auto; /* Adjust margin-top and margin-bottom as needed */
+    padding: 0px;
+    font-size: small;
+}
+
+.bulma-form h2 {
+    margin-bottom: 10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.flex-item {
+    flex: 1;
+    margin-right: 10px; /* Adjust as needed for spacing between fields */
+    margin-bottom: 15px;
+}
+
+.bulma-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+.radionu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.radionu label {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.field label {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.bulma-form input,
+.bulma-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+// .bulma-form button {
+//     width: 100%;
+//     padding: 10px;
+//     background-color: #007bff;
+//     color: #fff;
+//     border: none;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+// }
+
+.bulma-form button:hover {
+    background-color: #0056b3;
+}
+
+
+.alert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    text-align: center; /* Centered text */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .fixed-bottom {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Ensure it is on top of other elements */
+  }
+  
+

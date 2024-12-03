@@ -1,0 +1,51 @@
+<!-- Button to trigger the modal -->
+<button class="button is-primary" (click)="openModal()">New Division</button>
+
+<!-- Modal structure -->
+<div class="modal" [class.is-active]="isModalOpen">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Create Division</p>
+      <button class="delete" aria-label="close" (click)="closeModal()"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+      <form (ngSubmit)="onSubmit()" class="bulma-form">
+        <div class="heading">
+          <h2>**Marked Fields are compulsory. Employee Number must be filled for Employees</h2>
+        </div>
+
+       
+
+          
+
+          <div class="flex-container"> 
+          <div class="flex-item">
+            <label for="name">Abbr:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="division.name" required>
+          </div>
+        </div>
+ 
+        <div class="flex-container"> 
+      <div class="flex-item">
+          <label for="des">Description:</label>
+          <input type="text" id="des" name="des" [(ngModel)]="division.des" required>
+        </div>
+        </div>
+        <button class="button is-success"  style="margin-top: 10px;" type="submit">Submit</button>
+
+        <!-- <div *ngIf="successMessage" class="success-message">
+          {{ successMessage }}
+        </div> -->
+      </form>
+    </section>
+    <footer class="modal-card-foot">
+      <div class="buttons">
+        <!-- <button class="button is-success" type="submit">Save changes</button> -->
+        <button class="button is-black" (click)="closeModal()">Cancel</button>
+        
+      </div>
+    </footer>
+  </div>
+</div>

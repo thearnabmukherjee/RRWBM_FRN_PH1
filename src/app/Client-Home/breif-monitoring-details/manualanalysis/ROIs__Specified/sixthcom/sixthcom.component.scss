@@ -1,0 +1,67 @@
+/* Add your custom styles here */
+.heading-container{
+    background-color: skyblue;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    font-weight: 100 ;
+    font-size: 26px;
+    font-style: times new roman;
+    
+  }
+  
+  .heading-containe{
+    color: rgb(12, 11, 11);
+    font-size: larger;
+    font-weight: 300;
+  }
+
+  .report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0px;
+  }
+  
+  .report-table th{
+    background-color: rgb(38, 0, 253), rgba(33, 35, 83, 0.5) ;
+    color: #000; /* Black text */
+    font-weight: bold;
+  }
+  .report-table td {
+    border: 1px solid black;
+    padding: 8px;
+    color: aliceblue;
+  }
+  tr:nth-child(even) {
+    background-color: #4518db; /* Lighter green for even rows */
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #0ca8e6; /* Darker green for odd rows */
+}
+
+  
+  .parameter-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  
+  .new-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+   
+  }
+  

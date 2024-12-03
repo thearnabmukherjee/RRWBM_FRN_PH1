@@ -1,0 +1,23 @@
+/* monitor-box.component.css */
+
+.monitor-box-container {
+    position: absolute;
+    top: 70px;
+    right: 20px; /* Position to the right of the parent container */
+    display: flex; /* Use flexbox to arrange columns */
+    flex-direction: column; /* Arrange columns vertically */
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+   
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .column {
+    margin-bottom: 10px;
+   
+  }
+  
+
+  
+  

@@ -1,0 +1,31 @@
+
+<div *ngIf="observations">
+  <div class="modal">
+    <div class="modal-content">
+      <h2>Observations for Employee Number : {{ empNo }}</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Radionuclide</th>
+            <th>Activity (kBq)</th>
+            <th>Intake (kBq)</th>
+            <th>CED (mSv)</th>
+            <th>Creation</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let observation of observations">
+            <td>{{ observation.radionuclide }}</td>
+            <td>{{ observation.activity }}</td>
+            <td>{{ observation.intake }}</td>
+            <td>{{ observation.ced }}</td>
+            <td>{{ observation.creation }}</td>
+            <td><button class="button is-info is-rounded" (click)="viewDetails(observation)">Details</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="button is-danger is-rounded" (click)="closeModal()">Close</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+.block-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  
+  .block {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    margin-right:80%;
+    // margin-top: 60%;
+  }
+  
+  .block-row {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  
+  .block-label {
+    font-weight: bold;
+    width: 120px;
+  }
+  
+  .block-value {
+    flex: 1;
+  }
+  
+  .block-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  

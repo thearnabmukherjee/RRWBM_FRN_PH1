@@ -1,0 +1,40 @@
+
+<!-- Button to trigger the modal -->
+<app-search [data]="savedData" searchKey="name"  searchKey="mda"  (results)="onSearchResults($event)" [isShowStartDate]="false" [isShowEndDate]="false"></app-search>
+
+
+<div class="geoposition is-flex is-justify-content-flex-end is-align-items-flex-start">
+  <app-create-radionuclide></app-create-radionuclide>
+</div>
+
+
+
+<table class="table is-bordered is-striped is-narrow is-hoverable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>MDA</th>
+        <th>Energy(keV)</th>
+        <th>Yield</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of searchResults">
+
+        <td>{{ data.name }}</td>
+        <td>{{ data.mda }}</td>
+        <td>{{ data.kev }}</td>
+        <td>{{ data.yield }}</td>
+        <td>
+        <button class="button is-info is-rounded"style="margin-left: 2S0px;" (click)="deleteData(data)">Delete</button>
+      </td>
+        <!-- <td>
+          <button (click)="editItem(data1.id)">Edit</button>
+          <button class="button is-info is-rounded"(click)="deleteData(data1)">Delete</button>
+        </td> -->
+      </tr>
+    </tbody>
+  </table>
+  <!-- <button class="button is-danger is-outlined is-large">Generate</button> -->
+  

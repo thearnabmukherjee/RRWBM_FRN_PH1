@@ -1,0 +1,178 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+
+  <div class="navbar-brand">
+    <a class="navbar-item"  style="font-size: large;">
+   RRWBD
+    </a>   
+  </div>
+
+
+  <div class="navbar-item has-dropdown is-hoverable">
+    <a class="navbar-link">
+      10H
+    </a>
+
+    <div class="navbar-dropdown">
+      <a class="navbar-item" routerLink="/create10-h">
+        Create form
+      </a>
+      <a class="navbar-item" routerLink="/view10-h">
+        View form
+      </a>
+     
+
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink="/workers-list">
+        Client Home
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Reports
+        </a>
+
+        <div class="navbar-dropdown">
+          <!-- <a class="navbar-item" routerLink="/create10-h">
+            Create form
+          </a>
+          <a class="navbar-item" routerLink="/view10-h">
+            View form
+          </a> -->
+          <!-- <a class="navbar-item" routerLink="/form">
+            Form
+          </a> -->
+          <!-- <a class="navbar-item" routerLink="/create-report">
+            Create Reports
+          </a> -->
+          <a class="navbar-item" routerLink="/view-report">
+            Reports
+          </a>
+          <!-- <a class="navbar-item" routerLink="/pending-reports">
+            Pending Reports
+          </a>
+          <a class="navbar-item" routerLink="/register-report">
+            Register Report
+          </a>
+          <a class="navbar-item" routerLink="/parentunsign">
+            Un-Signed Reports
+          </a> -->
+          <a class="navbar-item" routerLink="/view-geometry">
+            Geometry
+          </a>
+          <a class="navbar-item" routerLink="/view-class">
+            Class
+          </a>
+          <a class="navbar-item" routerLink="/view-intakeroute">
+            Intake Routes
+          </a>
+          <a class="navbar-item" routerLink="/view-radionuclide">
+            RadioNuclide
+          </a>
+          <a class="navbar-item" routerLink="/view-division">
+            Division
+          </a>
+          <a class="navbar-item" routerLink="/view-plant">
+            Plant
+          </a>
+          <a class="navbar-item" routerLink="/view-tld">
+           TLD
+          </a>
+        </div>
+      </div>
+
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Parameters
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" routerLink="/checked">
+            Checked
+          </a>
+          <a class="navbar-item" routerLink="/unchecked">
+            Unchecked
+          </a>
+          <a class="navbar-item" routerLink="/clean">
+            Clean
+          </a>
+          <a class="navbar-item" routerLink="/contributions">
+            Contributions
+          </a>
+        </div>
+      </div> -->
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Administration
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" routerLink="/users">
+            Users
+          </a>
+          <a class="navbar-item" routerLink="/roles">
+            Roles
+          </a>
+          <a class="navbar-item" routerLink="/permission">
+            Permissions
+          </a>
+          <a class="navbar-item" routerLink="/hp">
+            Existing Health Physicists
+          </a>
+          <a class="navbar-item" routerLink="/manualanalysis">
+            Manual Analysis
+          </a>
+          <a class="navbar-item" routerLink="/table10h">
+            table10h
+          </a>
+          <a class="navbar-item" routerLink="/name">
+            Names
+          </a>
+          <a class="navbar-item" routerLink="/dataset">
+            New Dataset
+          </a>
+        </div>
+      </div>
+<!-- 
+      <a class="navbar-item" routerLink="/client-errors">
+        Client Errors
+      </a> -->
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Switch Tab
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" routerLink="/register">
+            Register
+          </a>
+          <a class="navbar-item" routerLink="/schedule">
+            Schedule
+          </a>
+          <a class="navbar-item" routerLink="/processed">
+            Processed
+          </a>
+          <a class="navbar-item" routerLink="/registered">
+            Registered
+          </a>
+          <a class="navbar-item" routerLink="/overdue">
+            Overdue
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

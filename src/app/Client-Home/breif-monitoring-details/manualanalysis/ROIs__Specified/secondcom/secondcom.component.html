@@ -1,0 +1,39 @@
+
+<div>
+    <h1>ROIS specific in Spectrum File</h1>
+        <h4>For ROIS specified in the spectrum file CPM obtained after substracting higher energy radionucide contribtions and background CPM from Gross CPM in subject spectrum</h4>
+        <h6> CPM = Gross CPM - Background CPM - contributions of higher energy radionuclides(except for radionuclides which do not exist in spectrum file)</h6>
+    <div class="heading-container">
+    <h2>RadioNuclide: I-131, MCA name: SA-1623</h2>
+    <button class="new-button" (click)="navigateToCertainPage()" >New</button>
+    </div>
+    <table class="report-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Mon-type</th>
+          <th>Activity(kBg)</th>
+          <th>Intake(kBg)</th>
+          <th>CED(mSv)</th>
+          <th>Created On</th>
+          <th>Details</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let geometry of geometries">
+          <td>{{ geometry.name }}</td>
+          <td>{{ geometry.type }}</td>
+          <td>{{ geometry.mon }}</td>
+          <td>{{ geometry.act }}</td>
+          <td>{{ geometry.inta }}</td>
+          <td>{{ geometry.ced }}</td>
+          <td>{{ geometry.createdOn }}</td>
+          <button class="parameter-button"  (click)="navigateToView()" >View</button>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

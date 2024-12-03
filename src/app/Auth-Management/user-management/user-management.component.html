@@ -1,0 +1,29 @@
+<h1 class="title is-1">Users List</h1>
+<h4 class="title is-5">The User page is For Admin Access can be Hold Responsible for changing access for Users </h4>
+<div>
+    <div class="heading-container">
+    <h1 class="title is-2">Users Table</h1>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th><abbr title="username">Username</abbr></th>
+          <th><abbr title="Firstname">First Name</abbr></th>
+          <th><abbr title="LastName">Last Name</abbr></th>
+          <th><abbr title="email">Email</abbr></th>
+          <th><abbr title="Actions">Actions</abbr></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let geometry of geometries">
+          <td>{{ geometry.name }}</td>
+          <td>{{ geometry.firstname }}</td>
+          <td>{{ geometry.lastname }}</td>
+          <td>{{ geometry.email }}</td>
+          <button class="button is-danger is-rounded" style="margin-right: 9px;">Block</button>
+          <button class="button is-info is-rounded"(click)="go_to_Roles()" >Manage Role</button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

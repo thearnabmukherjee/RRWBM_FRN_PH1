@@ -1,0 +1,59 @@
+
+<app-search [data]="savedData" searchKey="name" searchKey="doctor" (results)="onSearchResults($event)" [isShowStartDate]="false" [isShowEndDate]="false"></app-search>
+
+
+
+
+
+
+<table class="table is-bordered is-striped is-narrow is-hoverable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Plant</th>
+      <th>Health Physicist</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>RadioNuclides</th>
+      <th>Email</th>
+      <th>Intake</th>
+      <th>Contaminants</th>
+      <th>Particle Details</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of searchResults; let i = index">
+      <td>{{ data.name }}</td>
+      <td>{{ data.plant }}</td>
+      <td>{{ data.doctor }}</td>
+      <td>{{ data.age }}</td>
+      <td>{{ data.gender }}</td>
+      <td>{{ data.radion }}</td>
+      <td>{{ data.email }}</td>
+      <td>
+        <ng-container *ngIf="data.intake">
+          <span *ngFor="let key of getSelectedIntakes(data.intake).keys; let lastKey = last">
+            {{ key }}
+            <span *ngIf="key !== getSelectedIntakes(data.intake).lastKey">, </span>
+          </span>
+        </ng-container>
+      </td>
+      <td>
+        <ng-container *ngIf="data.contaminants">
+          <span *ngFor="let key of getSelectedContaminants(data.contaminants).keys; let lastKey = last">
+            {{ key }}
+            <span *ngIf="key !== getSelectedContaminants(data.contaminants).lastKey">, </span>
+          </span>
+        </ng-container>
+      </td>
+      <td>{{ data.particle }}</td>
+      <td>
+        <button class="button is-info is-rounded"  (click)="editItem(i)">Edit</button>
+        <button class="button is-danger is-rounded" style="margin-left: 4PX;"  (click)="deleteData(data)">Delete</button>
+        <button class="button is-link is-rounded" style="margin-left: 4PX;"  (click)="go_to_schedule()">Schedule</button>
+      
+      </td>
+    </tr>
+  </tbody>
+</table>

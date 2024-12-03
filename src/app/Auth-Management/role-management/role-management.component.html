@@ -1,0 +1,86 @@
+<h1 class="title is-1">Assign Roles</h1>
+<div>
+    <div class="heading-container">
+        <h1 class="title is-2">Roles</h1>
+    </div>
+    <table class="table is-bordered is-striped is-narrow is-hoverable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Roles</th>
+                <th>Roles Assigned</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let roles of arr_roles">
+                <td>{{ roles.id }}</td>
+                <td>{{ roles.role }}</td>
+                <td>{{ roles.roleassigned }}</td>
+                <td>
+                    <button class="button is-info is-rounded" (click)="openModal()">Select Role</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal structure -->
+<div class="modal" [class.is-active]="isModalActive">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Select Role</p>
+            <button class="delete" aria-label="close" (click)="closeModal()"></button>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content -->
+            <div>
+                <label class="checkbox">
+                    <input type="checkbox" [(ngModel)]="selectedRoles.superuser">
+                    Super-User
+                </label>
+                <br>
+                <label class="checkbox">
+                    <input type="checkbox" [(ngModel)]="selectedRoles.admin">
+                    Admin
+                </label>
+                <br>
+                <label class="checkbox">
+                    <input type="checkbox" [(ngModel)]="selectedRoles.hp">
+                    Health Physicist
+                </label>
+                <br>
+                <label class="checkbox">
+                    <input type="checkbox" [(ngModel)]="selectedRoles.technician">
+                    Technician
+                </label>
+                <br>
+                <label class="checkbox">
+                    <input type="checkbox" [(ngModel)]="selectedRoles.oicd1">
+                    OICD1
+                </label>
+                <br>
+                <label class="checkbox">
+                    <input type="checkbox" [(ngModel)]="selectedRoles.oicd2">
+                    OICD2
+                </label>
+                <br>
+                <label class="checkbox">
+                    <input type="checkbox" [(ngModel)]="selectedRoles.employee">
+                    Employee
+                </label>
+                <br>
+                <label class="checkbox">
+                    <input type="checkbox" [(ngModel)]="selectedRoles.contract">
+                    Contract Worker
+                </label>
+                
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" (click)="confirmSelection()" style="margin-right: 5px;">Save changes</button>
+            <button class="button" (click)="closeModal()">Cancel</button>
+        </footer>
+    </div>
+</div>

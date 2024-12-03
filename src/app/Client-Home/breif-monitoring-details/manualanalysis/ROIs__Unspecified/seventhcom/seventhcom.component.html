@@ -1,0 +1,24 @@
+
+<div>
+    <h1>ROIS not-specified in Spectrum File</h1>
+        <h4>If the ROI for a radionucide has not been added then its CPM won't be auto calculated.If ROI already exist then CPM is Gross CPM - Background CPM</h4>
+        <h4>^^ ROI doesn't exist for these radionucide in the spectrum file as well as in manually added ROIs</h4>
+    <div class="heading-container">
+    <h2>** RadioNuclide: Sc-46, MCA name: SA-1623</h2>
+    <button class="new-button" (click)="navigateToCertainPage()" >New</button>
+    </div>
+    <table class="report-table">
+      <thead>
+        <tr>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let geometry of geometries">
+          <td>{{ geometry.name }}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

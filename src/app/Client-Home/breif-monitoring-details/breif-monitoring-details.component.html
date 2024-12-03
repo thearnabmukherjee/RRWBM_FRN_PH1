@@ -1,0 +1,102 @@
+<!-- src/app/breif-monitoring-details/breif-monitoring-details.component.html
+<div *ngIf="selectedWorker">
+    <div class="monitor-box-container">
+      <table>
+        <tr>
+          <th>Name</th>
+          <td>{{ selectedWorker.name }}</td>
+        </tr>
+        <tr>
+          <th>Employee Number</th>
+          <td>{{ selectedWorker.empno }}</td>
+        </tr>
+        <tr>
+          <th>DIV/PLANT</th>
+          <td>{{ selectedWorker.plant }}</td>
+        </tr>
+        <tr>
+          <th>Monitor on</th>
+          <td>{{ selectedWorker.mondate }}</td>
+        </tr>
+        <tr>
+          <th>Geometry</th>
+          <td>{{ selectedWorker.geometry }}</td>
+        </tr>
+        <tr>
+          <th>Mon.type</th>
+          <td>{{ selectedWorker.monty }}</td>
+        </tr>
+        <tr>
+          <th>Observation</th>
+          <td>
+            {{ selectedWorker.observation }}
+            <button class="button is-info" style="margin-top: 5px; margin-bottom: 5px;" (click)="openObservationModal()">Observation Details</button>
+          </td>
+        </tr>
+        <tr>
+          <th>Observation Details</th>
+          <td>
+            {{ selectedWorker.observationDetails }}
+            <button class="button is-link" style="margin-right: 5px; margin-left:5px;"  (click)="navigateToSpectrum()">Spectrum</button>
+            <button class="button is-dark" style="margin-right: 5px;" (click)="navigateToAnalysis()">Analysis</button>
+            <button class="button is-success" style="margin-right: 5px;" (click)="navigateToSets()">Sets</button>
+            <button class="button is-danger" style="margin-right: 5px;" (click)="navigateToRecall()">Recall</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  <app-view-observation *ngIf="isObservationModalOpen" [empNo]="selectedWorker.empno"></app-view-observation>
+  <button (click)="closeObservationModal()">Close</button>
+
+  </div>
+   -->
+
+   <div *ngIf="selectedWorker">
+    <div class="monitor-box-container">
+      <table>
+        <tr>
+          <th>Name</th>
+          <td>{{ selectedWorker.name }}</td>
+        </tr>
+        <tr>
+          <th>Employee Number</th>
+          <td>{{ selectedWorker.empno }}</td>
+        </tr>
+        <tr>
+          <th>DIV/PLANT</th>
+          <td>{{ selectedWorker.plant }}</td>
+        </tr>
+        <tr>
+          <th>Monitor on</th>
+          <td>{{ selectedWorker.mondate }}</td>
+        </tr>
+        <tr>
+          <th>Geometry</th>
+          <td>{{ selectedWorker.geometry }}</td>
+        </tr>
+        <tr>
+          <th>Mon.type</th>
+          <td>{{ selectedWorker.monty }}</td>
+        </tr>
+        <tr>
+          <th>Observation</th>
+          <td>
+            {{ selectedWorker.observation }}
+            <button class="button is-info" style="margin-top: 5px; margin-bottom: 5px;" (click)="openObservationModal()">Observation Details</button>
+          </td>
+        </tr>
+        <tr>
+          <th>Observation Details</th>
+          <td>
+            {{ selectedWorker.observationDetails }}
+            <button class="button is-dark" style="margin-right: 5px; margin-left:5px;"  (click)="navigate_To_Analysis()">Analysis</button>
+            <button class="button is-Link" style="margin-right: 5px;" (click)="navigateToSpectrum()">Spectrum</button>
+            <button class="button is-success" style="margin-right: 5px;" (click)="navigateToSets()">Sets</button>
+            <button class="button is-danger" style="margin-right: 5px;" (click)="navigateToRecall()">Recall</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <app-view-observation *ngIf="isObservationModalOpen" [empNo]="selectedWorker.empno" (closeModalEvent)="closeObservationModal()"></app-view-observation>
+    <!-- <app-manualanalysis [empNo]="selectedWorker.empno" [name]="selectedWorker.name"></app-manualanalysis> -->
+</div>

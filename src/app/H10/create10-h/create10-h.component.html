@@ -1,0 +1,345 @@
+
+<form (ngSubmit)="onSubmit()" class="bulma-form">
+  <div class="heading">
+    <h2> * Marked Fields are complusary.Employee Number must be filled for Employees</h2>
+  </div> 
+    
+    <div class="flex-container">
+      <div class="flex-item">
+        <label for="plant">PLANT/Division</label>
+        <select id="plant" name="Plant" [(ngModel)]="formData.plant" required>
+          <option value="RSSD">RSSD</option>
+          <option value="HPD">HPD</option>
+          <option value="DHURVA">DHURVA</option>
+          <option value="cdm">CDM</option>
+          <option value="estab">ESTABLISHMENT SECTION</option>
+        </select>
+        </div>
+    
+        <div class="flex-item">
+            <label for ="doctor">Name Of Health Physicist</label>
+            <select id="doctor" name="doctor" [(ngModel)]="formData.doctor" required>
+                <option value="DR.Ajay Kumar">DR.Ajay Kumar</option>
+                <option value="DR.Sherin Sam Babu">DR.Sherin Sam Babu</option>
+                <option value="DR.Umar Sayeed">DR.Umar Sayeed</option>
+                <option value="DR.Vaishnavi Sawant">DR.Vaishnavi Sawant</option>
+                <option value="DR.Suheet Sonavane">DR.SUheet Sonavane</option>
+                <option value="DR.MAYUR">DR.MAYUR</option>
+            </select>
+        </div>
+      </div>
+    
+      <div class="flex-container">
+        <div class="flex-item">
+            <label for="dob">Date Of Birth:</label>
+            <input type="date" id="dob" name="dob" [(ngModel)]="formData.dob" required>
+          </div>
+    
+          <div class="flex-item">
+            <label for="doj">Date Of Joining:</label>
+            <input type="date" id="doj" name="doj" [(ngModel)]="formData.doj" required>
+          </div>
+        </div>
+    
+    
+          <div class="flex-container">
+            <div class="flex-item">
+          <label for="age">Age(in Years):</label>
+          <input type="string" id="age" name="age" [(ngModel)]="formData.age" required>
+        </div>
+       
+
+
+
+        <!-- <div>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" [(ngModel)]="formData.gender" required>
+            <option value="male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+          </div> -->
+
+          <div class="flex-item">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" [(ngModel)]="formData.gender" required>
+              <option [ngValue]="'male'">Male</option>
+              <option [ngValue]="'female'">Female</option>
+              <option [ngValue]="'other'">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex-container"> 
+          <div class="flex-item">
+          <label>RadioNuclides:</label><br>
+      <input type="radio" id="sc189" name="radioNuclides" [(ngModel)]="formData.radion" value="Sc189" required>
+      <label for="male">SC189</label><br>
+      <input type="radio" id="RU16" name="radioNuclides" [(ngModel)]="formData.radion" value="ru167" required>
+      <label for="female">RU16</label><br>
+      <input type="radio" id="ER08" name="radioNuclides" [(ngModel)]="formData.radion" value="er08" required>
+      <label for="other">Er08</label><br>
+        </div>
+   
+        <div class="flex-item">
+            <label></label><br>
+        <input type="radio" id="emp" name="persontype" [(ngModel)]="formData.type" value="emp" required>
+        <label for="emp">Employee</label><br>
+        <input type="radio" id="temp" name="persontype" [(ngModel)]="formData.type" value="contactworker" required>
+        <label for="contractworker">Contact Worker</label><br>
+          </div>
+          </div>
+    
+      
+        <div class="flex-container"> 
+        <div class="flex-item">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
+          </div>
+        
+          
+    
+    <!-- 
+          <div class="field">
+            <label class="label">Gender:</label>
+            <div class="buttons">
+              <button type="button" class="button" [class.is-primary]="formData.gender === 'male'" (click)="setGender('male')">Male</button>
+              <button type="button" class="button" [class.is-primary]="formData.gender === 'female'" (click)="setGender('female')">Female</button>
+              <button type="button" class="button" [class.is-primary]="formData.gender === 'other'" (click)="setGender('other')">Other</button>
+            </div>
+          </div> -->
+    
+         
+    
+    
+        
+            <div class="flex-item">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+        </div>
+    
+    
+        <div class="flex-item">
+            <label for="tld">TLD No:</label>
+            <input type="text" id="tld" name="tld" [(ngModel)]="formData.tld" required>
+          </div>
+          </div>
+    
+          <div class="flex-container"> 
+            <div class="flex-item">
+            <label for="compcode">Comp code No:</label>
+            <input type="text" id="compcode" name="compcode" [(ngModel)]="formData.compcode" required>
+          </div>
+    
+          <div class="flex-item">
+            <label for="empno">Employee No:</label>
+            <input type="text" id="empno" name="empno" [(ngModel)]="formData.empno" required>
+          </div>
+          </div>
+    
+          <div class="flex-container"> 
+            <div class="flex-item">
+            <label for="height">Height(cms):</label>
+            <input type="text" id="height" name="height" [(ngModel)]="formData.height" required>
+          </div>
+    
+          <div class="flex-item">
+            <label for="weight">Weight</label>
+            <input type="text" id="weight" name="weight" [(ngModel)]="formData.weight" required>
+          </div>
+    
+  <!---------------------------------------------------------------------------------------------------------------------->
+          <div class="flex-item">
+            <label for="chest">Chest Circumference</label>
+            <input type="text" id="chest" name="chest" [(ngModel)]="formData.chest" required>
+          </div>
+          </div>
+    
+
+        <div class="flex-container"> 
+            <div class="flex-item">
+            <label for="mondate">Request Monitoring Date:</label>
+            <input type="date" id="" name="mondate" [(ngModel)]="formData.mondate" required>
+          </div>
+          
+          <div class="flex-item">
+          <label for="exposuredt">Probable Date duration and time of Exposure
+              (Compulsary for Special Task Related Monitoring)
+          </label>
+          <input type="date" id="" name="exposuredt" [(ngModel)]="formData.exposuredt" required>
+          <input type="text" id="" name="exposuredt" [(ngModel)]="formData.exposuredt" required>
+        </div>
+        </div>
+
+          <div class="flex-container"> 
+            <div class="flex-item">
+            <label for ="proopt">Nature and type of process and Operation(Monitoring Type)*</label>
+            <select id="proopt" name="proopt" [(ngModel)]="formData.proopt" required>
+                <option value="Radiation">Radiation</option>
+                <option value="Thyroid">Thyroid</option>
+                <option value="Urine Sample">Urine Smaple</option>
+                <option value="Geometry Check">geometery check</option>
+                <option value="Radiocheck">RadioNuclide</option>
+                <option value="XYZ TEST TEST">ZXTY</option>
+            </select>
+        </div>
+
+
+
+        <div class="flex-item">
+          <label for ="geometry">Geometry</label>
+          <select id="geometry" name="geometry" [(ngModel)]="formData.geometry" required>
+              <option value="Baseline">Baseline</option>
+              <option value="Bench">Bench</option>
+              <option value="Chair">Chair</option>
+          </select>
+      </div>
+
+        <div class="flex-item">
+            <label for ="monty">Nature and type of process and Operation</label>
+            <select id="monty" name="monty" [(ngModel)]="formData.monty" required>
+                <option value="Radiation">Radiation</option>
+                <option value="Thyroid">throid</option>
+                <option value="Urine Sample">Urine Smaple</option>
+                <option value="Stool Sample">Stool Smaple</option>
+                
+            </select>
+        </div>
+        </div>
+
+
+        <div class="flex-item">
+            <label for="description">Brief Relavant description of Incident</label>
+            <input type="text" id="description" name="description" [(ngModel)]="formData.description" required>
+          </div>
+          
+          <div class="flex-container"> 
+            <div class="flex-item">
+            <label class="label">Route of Intake*</label>
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" name="intake" value="inhalation" [(ngModel)]="formData.intake.inhalation">
+                Inhalation
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="intake" value="injestion" [(ngModel)]="formData.intake.injestion">
+                Injestion
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="intake" value="injection" [(ngModel)]="formData.intake.injection">
+                Injection
+              </label>
+            </div>
+          </div>
+
+           
+          <div class="flex-item">
+            <label class="label">Possible Radio Active Contaminants*</label>
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" name="contaminants" value="i131" [(ngModel)]="formData.contaminants.i131">
+                I-131
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="contaminants" value="cs137" [(ngModel)]="formData.contaminants.cs137">
+                Cs-137
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="contaminants" value="co60" [(ngModel)]="formData.contaminants.co60">
+                Co-60
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="contaminants" value="sc46" [(ngModel)]="formData.contaminants.sc46">
+                Sc-46
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="contaminants" value="ru106" [(ngModel)]="formData.contaminants.ru106">
+                Ru-106
+              </label>
+            </div>
+          </div>
+          </div>
+          
+
+         
+          <div class="flex-container"> 
+            <div class="flex-item">
+            <label for="iodt">Last Date of Iodation work(For Iodine Handling):</label>
+            <input type="date" id="" name="iodt" [(ngModel)]="formData.iodt" required>
+            <input type="text" id="" name="iodt" [(ngModel)]="formData.iodt" required>
+          </div>
+
+
+          <div class="flex-item">
+            <label for ="particle">Particle Size and Solubility types</label>
+            <select id="particle" name="particle" [(ngModel)]="formData.particle" required>
+                <option value="Default">Default</option>
+                <option value="Proton">Proton</option>
+                <option value="Neutron">Neutron</option>
+                <option value="Alpha Particle">Alpha Particle</option>
+                <option value="Beta Particle">Beta Particle</option>
+                <option value="Gamma Rays">Gamma Rays</option>
+                <option value="Alpha Rays">Alpha Rays</option>
+            </select>
+            <input type="text" id="" name="particle" [(ngModel)]="formData.particle" required>
+        </div>
+        </div>
+
+
+        <div class="flex-container"> 
+          <div class="flex-item">
+            <label for="theraputictreatment">Details of Therapautic Treatment</label>
+            <input type="text" id="" name="theraputictreatment" [(ngModel)]="formData.theraputictreatment" required>
+          </div>
+
+
+          <div class="flex-item">
+            <label for="isocontaminants">Isotopic Compositions of Contaminants</label>
+            <input type="text" id="" name="isocontaminants" [(ngModel)]="formData.isocontaminants" required>
+          </div>
+
+          <div class="flex-item">
+            <label for="puam">PU:am Ratio:</label>
+            <input type="text" id="" name="puam" [(ngModel)]="formData.puam" required>
+          </div>
+          </div>
+          
+          
+          <div class="flex-container"> 
+            <div class="flex-item">
+            <label for="samplecol">Date and Duration of Urine/Fecal collection</label>
+            <input type="date" id="" name="samplecol" [(ngModel)]="formData.samplecol" required>
+            <input type="text" id="" name="samplecol" [(ngModel)]="formData.samplecol" required>
+          </div>
+
+          <div class="flex-item">
+            <label for="samplecol1">Duration of Collection (Urine/Fecal Sample)</label>
+            <input type="date" id="" name="samplecol1" [(ngModel)]="formData.samplecol1" required>
+            <input type="text" id="" name="samplecol1" [(ngModel)]="formData.samplecol1" required>
+          </div>
+
+          <div class="flex-item">
+            <label for="prevmon">Date of Previous Monitoring</label>
+            <input type="date" id="" name="prevmon" [(ngModel)]="formData.prevmon" required>
+            <input type="text" id="" name="prevmon" [(ngModel)]="formData.prevmon" required>
+          </div>
+          </div>
+
+          <div>
+            <label for="comments">Comments</label>
+            <input type="text" id="" name="comments" [(ngModel)]="formData.comments" required>
+          </div>
+
+
+
+  <!---------------------------------------------------------------------------------------------------------------------->
+  <div class="buttons are-medium">
+        <button class="button is-link is-active"  style="margin-top: 15px;" type="submit">Submit</button>
+  </div>   
+      
+
+        <div *ngIf="successMessage" class="alert alert-success">
+          Form submitted successfully!
+        </div>
+        
+        

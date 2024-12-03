@@ -1,0 +1,29 @@
+<div class="search-container">
+    <div class="heading-container">
+      <h2 class="heading">Search</h2>
+    </div>
+  
+    <div class="field searchfields">
+      <label for="searchText" class="label">Search Text</label>
+      <div class="control">
+        <input type="text" id="searchText" class="input" [(ngModel)]="searchVal">
+      </div>
+    </div>
+  
+    <div *ngIf="isShowStartDate" class="field searchfields">
+      <label for="startDate" class="label">Start Date</label>
+      <div class="control">
+        <input type="date" id="startDate" class="input" [(ngModel)]="startDate">
+      </div>
+    </div>
+  
+    <div *ngIf="isShowEndDate" class="field searchfields">
+      <label for="endDate" class="label">End Date</label>
+      <div class="control">
+        <input type="date" id="endDate" class="input" [(ngModel)]="endDate">
+      </div>
+    </div>
+  
+    <!-- Search button -->
+    <button class="button is-primary search-button" (click)="onSearch()">Search</button>
+</div>

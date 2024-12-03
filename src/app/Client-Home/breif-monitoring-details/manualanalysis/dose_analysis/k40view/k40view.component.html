@@ -1,0 +1,85 @@
+<!-- dose-analysis.component.html -->
+
+<div class="dose-analysis-container">
+    <div class="heading-container">
+      <h2 class="heading">Dose Analysis for K-40, SA-1623</h2>
+    </div>
+    <div class="content-container">
+      <div class="row">
+        <div class="column">
+          <label>Name</label>
+          <input type="text" placeholder="Enter Name" [(ngModel)]="name">
+        </div>
+        <div class="column">
+          <label>Class</label>
+          <select [(ngModel)]="class">
+            <option value="F">F</option>
+            <option value="M">M</option>
+            <option value="T">T</option>
+            <option value="LGBTQ">LGBTQ</option>
+          </select>
+        </div>
+        <div class="column">
+          <label>Intake Date</label>
+          <input type="date" [(ngModel)]="intakeDate">
+        </div>
+        <div class="column">
+          <label>EFF.Cal.Factor (cpm/KBq)</label>
+          <input type="text" [(ngModel)]="effCalFactor">
+        </div>
+        <div class="column">
+          <label>Retained Fraction</label>
+          <input type="text" [(ngModel)]="retainedFraction">
+        </div>
+        <div class="column">
+          <label>Dose Coefficient (mSv/KBq)</label>
+          <input type="text" [(ngModel)]="doseCoefficient">
+        </div>
+        <div class="column">
+          <label>Dynamic MDA (KBq)</label>
+          <input type="text" [(ngModel)]="dynamicMDA">
+        </div>
+        <div class="column">
+          <label>Selected Intake Date</label>
+          <input type="date" [(ngModel)]="selectedIntakeDate">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <label>Intake Route</label>
+          <select [(ngModel)]="intakeRoute">
+            <option value="ingestion">Ingestion</option>
+            <option value="inhalation">Inhalation</option>
+            <option value="injection">Injection</option>
+          </select>
+        </div>
+        <div class="column">
+          <label>Count rate (cpm)</label>
+          <input type="text" [(ngModel)]="countRate">
+        </div>
+        <div class="column">
+          <label>Activity (kBq)</label>
+          <input type="text" [(ngModel)]="activity">
+        </div>
+        <div class="column">
+          <label>Intake (kBq)</label>
+          <input type="text" [(ngModel)]="intake">
+        </div>
+        <div class="column">
+          <label>CED (mSv)</label>
+          <input type="text" [(ngModel)]="ced">
+        </div>
+        <div class="column">
+          <label>Comments</label>
+          <input type="text" [(ngModel)]="comments">
+        </div>
+        <div class="column">
+          <label>Created by</label>
+          <input type="text" value="RSSD DEPT" readonly>
+        </div>
+      </div>
+      <button class="close-button" (click)="navigateToCertainPage()">Close</button>
+      
+    </div>
+  </div>
+  

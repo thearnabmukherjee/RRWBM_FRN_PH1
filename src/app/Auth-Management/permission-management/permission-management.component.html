@@ -1,0 +1,39 @@
+
+<h4 class="title is-5">Admin will have the full access to assign the pages to the selected users </h4>
+<div>
+    <div class="heading-container">
+    <h1 class="title is-2">Permissions</h1>
+    </div>
+    <table class="table is-bordered is-striped is-narrow is-hoverable">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Code</th>
+          <th>Super User</th>
+          <th>Admin</th>
+          <th>Health Physicist</th>
+          <th>Technician</th>
+          <th>OICD1</th>
+          <th>OICD2</th>
+          <th>Employee</th>
+          <th>Contract Worker</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let permission of geometries">
+          <td>{{ permission.id}}</td>
+          <td>{{ permission.desc }}</td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="button is-success" style="margin-top: 10px;">Save</button>
+  

@@ -1,0 +1,52 @@
+/* Add your custom styles here */
+.search-container {
+    background: linear-gradient(to bottom, white,whitesmoke); /* Gradient from top to bottom */
+    margin: 20px auto;
+    width: 50%;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .search-container h2 {
+    color: deepblue;}
+    .heading-container {
+        background-color: lightgray;
+        padding: 10px;
+        border-radius: 5px;
+        
+      }
+      
+      .heading {
+        color: rgb(0, 0, 0);
+      }
+      .searchfields-container{
+     margin-right: 10px;
+     margin-bottom: 10px;
+     
+      }
+      button.search-button {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      
+      button.search-button:hover {
+        background-color: darkred;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }

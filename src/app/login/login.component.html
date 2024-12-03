@@ -1,0 +1,39 @@
+<div class="background-logo-container">
+  <div class="content-container">
+    <div class="is-size-1 has-text-centered">
+      <figure class="image is-256x256">
+        <img src="assets/barc.png" alt="barc" />
+      </figure>
+    </div>
+    
+    <p class="title is-1">Bhabha Atomic Research Centre</p>
+    <p class="title is-3">Welcome to RRWBM</p>
+    <p class="title is-5">Radiation Safety and Security Division</p>
+
+    <div class="container is-fluid">
+      <div class="column is-half is-offset-one-quarter">
+        <h2 class="title">Login</h2>
+        <form (submit)="login()" [class.is-loading]="isLoading">
+          <div class="field">
+            <label class="label" for="username">Username:</label>
+            <div class="control">
+              <input class="input" type="text" id="username" name="username" [(ngModel)]="username" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="password">Password:</label>
+            <div class="control">
+              <input class="input" type="password" id="password" name="password" [(ngModel)]="password" required>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary" type="submit" [disabled]="isLoading">Login</button>
+            </div>
+          </div>
+          <div class="notification is-danger" *ngIf="error">{{ error }}</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

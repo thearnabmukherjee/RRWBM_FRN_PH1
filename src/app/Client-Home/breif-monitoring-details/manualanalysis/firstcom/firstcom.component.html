@@ -1,0 +1,59 @@
+
+
+   <!-- <div class="search-container">
+    <div class="heading-container">
+        <h2 class="heading">Monitor Box</h2>
+    </div>
+    <div class ="monitor-field">
+        <label for="monitoringType">Type of Monitoring:</label>
+        <select id="monitoringType">
+          <option value="Superannuation">Superannuation</option>
+          <option value="Annual">Annual</option>
+          <option value="Baseline">Baseline</option>
+          <option value="Routine">Routine</option>
+        </select>
+      </div>
+
+    <div class="search-fields">
+      <label for="startDate">Intake Date:</label>
+      <input type="date" id="startDate">
+    </div>
+    
+    <button class="search-button" (click)="goToDose()">View Dose Calculation set</button>
+    <button class="srh-button" (click)="goToHomePage()" >Go back to Client Home</button>
+  </div>
+   -->
+
+
+
+<!-- monitor-box.component.html -->
+<div class="container">
+  <div class="box">
+    <h2 class="title is-4">Monitor Box</h2>
+    <div class="field">
+      <label class="label" for="monitoringType">Type of Monitoring:</label>
+      <div class="control">
+        <div class="select">
+          <select id="monitoringType">
+            <option value="Superannuation">Superannuation</option>
+            <option value="Annual">Annual</option>
+            <option value="Baseline">Baseline</option>
+            <option value="Routine">Routine</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <div class="field">
+      <label class="label" for="startDate">Intake Date:</label>
+      <div class="control">
+        <input class="input date-input" type="date" id="startDate">
+      </div>
+    </div>
+    
+    <div class="buttons">
+      <button class="button is-primary" (click)="goToDose()">View Dose Calculation set</button>
+      <button class="button is-link" (click)="goToHomePage()">Go back to Client Home</button>
+    </div>
+  </div>
+</div>
