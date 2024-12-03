@@ -1,4 +1,5 @@
-# Japan
+# Remote Requisition for Whole Body Monitoring 
+## Based on Angular used Bulma CSS 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
